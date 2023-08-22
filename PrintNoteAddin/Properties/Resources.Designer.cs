@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NoteHighlightAddin.Properties {
+namespace PrintNoteAddin.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace NoteHighlightAddin.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NoteHighlightAddin.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PrintNoteAddin.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace NoteHighlightAddin.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NoteHighlightAddin.
+        ///   Looks up a localized string similar to PrintNoteAddin.
         /// </summary>
         internal static string AddInTitle {
             get {
@@ -185,9 +185,12 @@ namespace NoteHighlightAddin.Properties {
         ///    &lt;ribbon&gt;
         ///        &lt;tabs&gt;
         ///            &lt;tab id=&quot;tabNoteHighlight&quot; label=&quot;NoteHighlight&quot; keytip=&quot;H&quot;&gt;
-        ///                &lt;group id=&quot;groupLanguage&quot; label=&quot;Language&quot;&gt;
-        ///                  &lt;button id=&quot;buttonCSharp&quot; label=&quot;C#&quot; size=&quot;large&quot; screentip=&quot;Enter C# Code&quot; onAction=&quot;AddInButtonClicked&quot; tag=&quot;cs&quot; keytip=&quot;C&quot; image=&quot;CSharp.png&quot; visible=&quot;true&quot;/&gt;
-        ///                  &lt;button id=&quot;b [rest of string was truncated]&quot;;.
+        ///				&lt;group id=&quot;groupLanguage&quot; label=&quot;Language&quot;&gt;
+        ///					&lt;button id=&quot;buttonCSharp&quot; label=&quot;Print&quot; size=&quot;large&quot; screentip=&quot;Enter C# Code&quot; onAction=&quot;AddInButtonClicked&quot; tag=&quot;cs&quot; keytip=&quot;C&quot; image=&quot;CSharp.png&quot; visible=&quot;true&quot;/&gt;
+        ///				&lt;/group&gt;
+        ///            &lt;/tab&gt;
+        ///        &lt;/tabs&gt;
+        ///   [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ribbon {
             get {

@@ -7,8 +7,8 @@
     <ProjectGuid>{D874E185-08FE-48C5-BADE-0FE84060C978}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NoteHighlightAddin</RootNamespace>
-    <AssemblyName>NoteHighlightAddin</AssemblyName>
+    <RootNamespace>PrintNoteAddin</RootNamespace>
+    <AssemblyName>PrintNoteAddin</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

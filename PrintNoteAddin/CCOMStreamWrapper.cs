@@ -8,7 +8,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 
-namespace NoteHighlightAddin.Utilities
+namespace PrintNoteAddin.Utilities
 {
     class CCOMStreamWrapper : IStream
     {

@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B750AB345C0D480EA4E6EEE86DC9BD2F"
+        "MsmKey" = "8:_ED99A6775AE44FF4B343B291117934EE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -39,7 +39,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\NoteHighlight2016x86.msi"
+        "OutputFilename" = "8:Debug\\PrintNote.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -71,7 +71,7 @@
         "DisplayName" = "8:LocalDebug"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:LocalDebug\\SetupX86.msi"
+        "OutputFilename" = "8:LocalDebug\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -150,7 +150,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:v4.5  "
+                "FrameworkVersion" = "8:v4.5    "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=395269"
                 }
@@ -158,7 +158,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B750AB345C0D480EA4E6EEE86DC9BD2F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED99A6775AE44FF4B343B291117934EE"
             {
             "SourcePath" = "8:..\\PrintNoteAddin\\ribbon.xml"
             "TargetName" = "8:ribbon.xml"
@@ -309,23 +309,23 @@
         }
         "Product"
         {
-        "Name" = "8:NoteHighlightAddin"
-        "ProductName" = "8:NoteHighlight2016"
-        "ProductCode" = "8:{8998B59E-1FE1-4EA4-A4E7-AA2D41C4E42E}"
-        "PackageCode" = "8:{8FA80268-B122-4657-9186-5491706CB12B}"
+        "Name" = "8:PrintNoteAddin"
+        "ProductName" = "8:PrintNote"
+        "ProductCode" = "8:{2AD747CF-2074-4D70-A450-2F038B70106C}"
+        "PackageCode" = "8:{457851E9-FCED-4B7D-A3CD-B2DF67F226F9}"
         "UpgradeCode" = "8:{0025873C-20C5-48D6-A93A-FBD3891A9233}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:3.7"
-        "Manufacturer" = "8:CodingRoad"
+        "ProductVersion" = "8:1.0"
+        "Manufacturer" = "8:Faisal"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:NoteHighlight2016Setup"
+        "Title" = "8:Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:CodingRoad"
+        "ARPCONTACT" = "8:Faisal"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -350,7 +350,7 @@
             {
                 "Keys"
                 {
-                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_184A1F5EBEBE4FA18E093FA74EFC0EA5"
+                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_3CCFCBA77199470DA6600AAA0908BDF9"
                     {
                     "Name" = "8:SOFTWARE"
                     "Condition" = "8:"
@@ -397,7 +397,7 @@
                                                         {
                                                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_4CBE6A756F7B498480396E23C0912D91"
                                                             {
-                                                            "Name" = "8:NoteHighlightAddin.dll"
+                                                            "Name" = "8:PrintNoteAddin.dll"
                                                             "Condition" = "8:"
                                                             "AlwaysCreate" = "11:FALSE"
                                                             "DeleteAtUninstall" = "11:TRUE"
@@ -413,7 +413,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:[TARGETDIR]NoteHighlightAddin.dll"
+                                                                    "Value" = "8:[TARGETDIR]PrintNoteAddin.dll"
                                                                     }
                                                                 }
                                                             }
@@ -461,7 +461,7 @@
                                                         {
                                                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F7AC1B508D9C4A8D812B74D423321C9B"
                                                             {
-                                                            "Name" = "8:NoteHighlightAddin"
+                                                            "Name" = "8:PrintNoteAddin"
                                                             "Condition" = "8:"
                                                             "AlwaysCreate" = "11:FALSE"
                                                             "DeleteAtUninstall" = "11:TRUE"
@@ -493,7 +493,7 @@
                                                                     "Condition" = "8:"
                                                                     "Transitive" = "11:FALSE"
                                                                     "ValueTypes" = "3:1"
-                                                                    "Value" = "8:NoteHighlightAddIn"
+                                                                    "Value" = "8:PrintNoteAddin"
                                                                     }
                                                                 }
                                                             }
@@ -686,7 +686,7 @@
                                             "Condition" = "8:"
                                             "Transitive" = "11:FALSE"
                                             "ValueTypes" = "3:1"
-                                            "Value" = "8:NoteHighlight2016.AddIn"
+                                            "Value" = "8:PrintNote.Addin"
                                             }
                                         }
                                     }
@@ -760,7 +760,7 @@
                                             "Condition" = "8:"
                                             "Transitive" = "11:FALSE"
                                             "ValueTypes" = "3:1"
-                                            "Value" = "8:NoteHighlight2016.AddIn"
+                                            "Value" = "8:PrintNote.Addin"
                                             }
                                         }
                                     }
@@ -795,7 +795,7 @@
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "ValueTypes" = "3:1"
-                                    "Value" = "8:NoteHighlightAddIn Class"
+                                    "Value" = "8:PrintNoteAddin Class"
                                     }
                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_75BFBC491AF3480F8F7187FB6D48D560"
                                     {
@@ -814,7 +814,7 @@
                     }
                     "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_716C060777B448F9AD2A0270AD2CB963"
                     {
-                    "Name" = "8:NoteHighlightAddin"
+                    "Name" = "8:PrintNoteAddin"
                     "Condition" = "8:"
                     "AlwaysCreate" = "11:FALSE"
                     "DeleteAtUninstall" = "11:TRUE"
@@ -839,7 +839,7 @@
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "ValueTypes" = "3:1"
-                                    "Value" = "8:NoteHighlightAddin"
+                                    "Value" = "8:PrintNoteAddin"
                                     }
                                 }
                             }
@@ -1299,7 +1299,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_692D7E391D074D36AD2530720FB8D6C4"
             {
-            "SourcePath" = "8:..\\PrintNoteAddin\\obj\\Debug\\NoteHighlightAddin.dll"
+            "SourcePath" = "8:..\\PrintNoteAddin\\obj\\Debug\\PrintNoteAddin.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_76DE0C3E4C3C41398EBF2960C9F81C36"
