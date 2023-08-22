@@ -4,7 +4,7 @@
         <tabs>
             <tab id="tabNoteHighlight" label="NoteHighlight" keytip="H">
 				<group id="groupLanguage" label="Language">
-					<button id="buttonCSharp" label="C#" size="large" screentip="Enter C# Code" onAction="AddInButtonClicked" tag="cs" keytip="C" image="CSharp.png" visible="true"/>
+					<button id="buttonCSharp" label="Print" size="large" screentip="Enter C# Code" onAction="AddInButtonClicked" tag="cs" keytip="C" image="CSharp.png" visible="true"/>
 				</group>
             </tab>
         </tabs>

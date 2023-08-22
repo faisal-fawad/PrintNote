@@ -20,7 +20,6 @@ using System.Drawing;
 using Microsoft.Office.Interop.OneNote;
 using System.Text;
 using System.Linq;
-using Helper;
 using System.Threading;
 using System.Web;
 using System.Configuration;
@@ -58,7 +57,7 @@ namespace NoteHighlightAddin
         {
             try
             {
-                var workingDirectory = Path.Combine(ProcessHelper.GetDirectoryFromPath(Assembly.GetCallingAssembly().Location), "ribbon.xml");
+                var workingDirectory = Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "ribbon.xml");
                 string file = File.ReadAllText(workingDirectory);
                 return file;
             }

@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteHighlightAddin", "NoteHighlightAddin\NoteHighlightAddin.csproj", "{D874E185-08FE-48C5-BADE-0FE84060C978}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintNoteAddin", "PrintNoteAddin\PrintNoteAddin.csproj", "{D874E185-08FE-48C5-BADE-0FE84060C978}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{288265D6-3A52-46A9-9B15-2BAD1B9F3C02}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupX86", "SetupX86\SetupX86.vdproj", "{610B97A7-752E-4501-8415-A40251735F85}"
 EndProject
@@ -57,24 +55,6 @@ Global
 		{288265D6-3A52-46A9-9B15-2BAD1B9F3C02}.Release|x64.ActiveCfg = Release
 		{288265D6-3A52-46A9-9B15-2BAD1B9F3C02}.Release|x86.ActiveCfg = Release
 		{288265D6-3A52-46A9-9B15-2BAD1B9F3C02}.Release|x86.Build.0 = Release
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Debug|x64.Build.0 = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Debug|x86.Build.0 = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.LocalDebug|Any CPU.ActiveCfg = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.LocalDebug|Any CPU.Build.0 = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.LocalDebug|x64.ActiveCfg = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.LocalDebug|x64.Build.0 = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.LocalDebug|x86.ActiveCfg = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.LocalDebug|x86.Build.0 = Debug|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Release|x64.ActiveCfg = Release|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Release|x64.Build.0 = Release|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Release|x86.ActiveCfg = Release|Any CPU
-		{391303F3-B2F5-45DC-9D0D-F4D6D3A76A5D}.Release|x86.Build.0 = Release|Any CPU
 		{610B97A7-752E-4501-8415-A40251735F85}.Debug|Any CPU.ActiveCfg = Debug
 		{610B97A7-752E-4501-8415-A40251735F85}.Debug|Any CPU.Build.0 = Debug
 		{610B97A7-752E-4501-8415-A40251735F85}.Debug|x64.ActiveCfg = Debug

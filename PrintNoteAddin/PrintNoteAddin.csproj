@@ -104,9 +104,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\CPP.png" />
     <Content Include="Resources\CSharp.png" />
     <Content Include="Resources\CSS.png" />
@@ -156,12 +153,6 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Helper\Helper.csproj">
-      <Project>{391303f3-b2f5-45dc-9d0d-f4d6d3a76a5d}</Project>
-      <Name>Helper</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
