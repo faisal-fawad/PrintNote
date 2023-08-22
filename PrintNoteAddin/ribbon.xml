@@ -2,9 +2,9 @@
 <customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" loadImage="GetImage">
     <ribbon>
         <tabs>
-            <tab id="tabNoteHighlight" label="NoteHighlight" keytip="H">
-				<group id="groupLanguage" label="Language">
-					<button id="buttonCSharp" label="Print" size="large" screentip="Enter C# Code" onAction="AddInButtonClicked" tag="cs" keytip="C" image="CSharp.png" visible="true"/>
+            <tab id="tabPrintNote" label="PrintNote" keytip="H">
+				<group id="groupPrint" label="Print">
+					<button id="buttonPrint" label="Print" size="large" screentip="Print a page" onAction="AddInButtonClicked" tag="print" keytip="P" image="Print.png" visible="true"/>
 				</group>
             </tab>
         </tabs>

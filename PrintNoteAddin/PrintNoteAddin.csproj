@@ -104,22 +104,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\CPP.png" />
-    <Content Include="Resources\CSharp.png" />
-    <Content Include="Resources\CSS.png" />
-    <Content Include="Resources\HTML.png" />
-    <Content Include="Resources\JAVA.png" />
-    <Content Include="Resources\JS.png" />
-    <Content Include="Resources\Logo.ico" />
     <Content Include="Resources\Logo.png" />
-    <Content Include="Resources\Other.png" />
-    <Content Include="Resources\Perl.png" />
-    <Content Include="Resources\PHP.png" />
-    <Content Include="Resources\Python.png" />
-    <Content Include="Resources\Ruby.png" />
-    <Content Include="Resources\SQL.png" />
-    <Content Include="Resources\XHTML.png" />
-    <Content Include="Resources\XML.png" />
+    <Content Include="Resources\Print.png" />
     <None Include="ribbon.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -128,8 +114,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

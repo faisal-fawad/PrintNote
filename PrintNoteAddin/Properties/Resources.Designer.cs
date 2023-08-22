@@ -72,66 +72,6 @@ namespace PrintNoteAddin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CPP {
-            get {
-                object obj = ResourceManager.GetObject("CPP", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CSharp {
-            get {
-                object obj = ResourceManager.GetObject("CSharp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CSS {
-            get {
-                object obj = ResourceManager.GetObject("CSS", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap HTML {
-            get {
-                object obj = ResourceManager.GetObject("HTML", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap JAVA {
-            get {
-                object obj = ResourceManager.GetObject("JAVA", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap JS {
-            get {
-                object obj = ResourceManager.GetObject("JS", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
@@ -142,39 +82,9 @@ namespace PrintNoteAddin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Other {
+        internal static System.Drawing.Bitmap Print {
             get {
-                object obj = ResourceManager.GetObject("Other", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Perl {
-            get {
-                object obj = ResourceManager.GetObject("Perl", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PHP {
-            get {
-                object obj = ResourceManager.GetObject("PHP", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Python {
-            get {
-                object obj = ResourceManager.GetObject("Python", resourceCulture);
+                object obj = ResourceManager.GetObject("Print", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -184,57 +94,18 @@ namespace PrintNoteAddin.Properties {
         ///&lt;customUI xmlns=&quot;http://schemas.microsoft.com/office/2006/01/customui&quot; loadImage=&quot;GetImage&quot;&gt;
         ///    &lt;ribbon&gt;
         ///        &lt;tabs&gt;
-        ///            &lt;tab id=&quot;tabNoteHighlight&quot; label=&quot;NoteHighlight&quot; keytip=&quot;H&quot;&gt;
-        ///				&lt;group id=&quot;groupLanguage&quot; label=&quot;Language&quot;&gt;
-        ///					&lt;button id=&quot;buttonCSharp&quot; label=&quot;Print&quot; size=&quot;large&quot; screentip=&quot;Enter C# Code&quot; onAction=&quot;AddInButtonClicked&quot; tag=&quot;cs&quot; keytip=&quot;C&quot; image=&quot;CSharp.png&quot; visible=&quot;true&quot;/&gt;
+        ///            &lt;tab id=&quot;tabPrintNote&quot; label=&quot;PrintNote&quot; keytip=&quot;H&quot;&gt;
+        ///				&lt;group id=&quot;groupPrint&quot; label=&quot;Print&quot;&gt;
+        ///					&lt;button id=&quot;buttonPrint&quot; label=&quot;Print&quot; size=&quot;large&quot; screentip=&quot;Print a page&quot; onAction=&quot;AddInButtonClicked&quot; tag=&quot;print&quot; keytip=&quot;P&quot; image=&quot;Print.svg&quot; visible=&quot;true&quot;/&gt;
         ///				&lt;/group&gt;
         ///            &lt;/tab&gt;
         ///        &lt;/tabs&gt;
-        ///   [rest of string was truncated]&quot;;.
+        ///    &lt;/ribbon&gt;
+        ///&lt; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ribbon {
             get {
                 return ResourceManager.GetString("ribbon", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Ruby {
-            get {
-                object obj = ResourceManager.GetObject("Ruby", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap SQL {
-            get {
-                object obj = ResourceManager.GetObject("SQL", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap XHTML {
-            get {
-                object obj = ResourceManager.GetObject("XHTML", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap XML {
-            get {
-                object obj = ResourceManager.GetObject("XML", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

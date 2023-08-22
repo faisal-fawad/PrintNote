@@ -39,7 +39,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\PrintNote.msi"
+        "OutputFilename" = "8:Debug\\PrintNoteX86.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -58,10 +58,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.8"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    "Name" = "8:Microsoft .NET Framework 4.8 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.8"
                     }
                 }
             }
@@ -150,7 +150,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:v4.5    "
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.8"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=395269"
                 }
@@ -311,9 +311,9 @@
         {
         "Name" = "8:PrintNoteAddin"
         "ProductName" = "8:PrintNote"
-        "ProductCode" = "8:{2AD747CF-2074-4D70-A450-2F038B70106C}"
-        "PackageCode" = "8:{457851E9-FCED-4B7D-A3CD-B2DF67F226F9}"
-        "UpgradeCode" = "8:{0025873C-20C5-48D6-A93A-FBD3891A9233}"
+        "ProductCode" = "8:{DB8D2CD0-6584-4BA0-AF36-6CBDCF8D98D7}"
+        "PackageCode" = "8:{FCDE054E-2209-4708-92C7-1EA951F9B282}"
+        "UpgradeCode" = "8:{CE910BBE-9F8B-49F6-A661-1E4C7E35AB93}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
@@ -537,7 +537,7 @@
                                         {
                                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_88A39E02EF2D463CB938160AC101CB31"
                                             {
-                                            "Name" = "8:{4C6B0362-F139-417F-9661-3663C268B9E9}"
+                                            "Name" = "8:{6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17}"
                                             "Condition" = "8:"
                                             "AlwaysCreate" = "11:FALSE"
                                             "DeleteAtUninstall" = "11:TRUE"
@@ -553,7 +553,7 @@
                                                     "Condition" = "8:"
                                                     "Transitive" = "11:FALSE"
                                                     "ValueTypes" = "3:1"
-                                                    "Value" = "8:{4C6B0362-F139-417F-9661-3663C268B9E9}"
+                                                    "Value" = "8:{6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17}"
                                                     }
                                                 }
                                             }
@@ -573,7 +573,7 @@
                                         {
                                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_8F6F08870AB84046A3518DDF84C3466A"
                                             {
-                                            "Name" = "8:{4C6B0362-F139-417F-9661-3663C268B9E9}"
+                                            "Name" = "8:{6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17}"
                                             "Condition" = "8:"
                                             "AlwaysCreate" = "11:FALSE"
                                             "DeleteAtUninstall" = "11:TRUE"
@@ -625,7 +625,7 @@
                         {
                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_80EFEB6F8B61425B8FBD17728928F551"
                             {
-                            "Name" = "8:{4C6B0362-F139-417F-9661-3663C268B9E9}"
+                            "Name" = "8:{6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17}"
                             "Condition" = "8:"
                             "AlwaysCreate" = "11:FALSE"
                             "DeleteAtUninstall" = "11:TRUE"
@@ -661,7 +661,7 @@
                         {
                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_FEA1447FA6204611896D7C380A1DBAF8"
                             {
-                            "Name" = "8:{4C6B0362-F139-417F-9661-3663C268B9E9}"
+                            "Name" = "8:{6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17}"
                             "Condition" = "8:"
                             "AlwaysCreate" = "11:FALSE"
                             "DeleteAtUninstall" = "11:TRUE"
@@ -738,7 +738,7 @@
                                             "Condition" = "8:"
                                             "Transitive" = "11:FALSE"
                                             "ValueTypes" = "3:1"
-                                            "Value" = "8:{4C6B0362-F139-417F-9661-3663C268B9E9}"
+                                            "Value" = "8:{6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17}"
                                             }
                                         }
                                     }
@@ -803,7 +803,7 @@
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "ValueTypes" = "3:1"
-                                    "Value" = "8:{4C6B0362-F139-417F-9661-3663C268B9E9}"
+                                    "Value" = "8:{6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17}"
                                     }
                                 }
                             }
@@ -861,7 +861,7 @@
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "ValueTypes" = "3:1"
-                                    "Value" = "8:{4C6B0362-F139-417F-9661-3663C268B9E9}"
+                                    "Value" = "8:{6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17}"
                                     }
                                 }
                             }

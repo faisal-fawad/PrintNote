@@ -30,7 +30,7 @@ using System.Globalization;
 namespace PrintNoteAddin
 {
 	[ComVisible(true)]
-	[Guid("4C6B0362-F139-417F-9661-3663C268B9E9"), ProgId("PrintNote.Addin")]
+	[Guid("6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17"), ProgId("PrintNote.Addin")]
 
 	public class AddIn : IDTExtensibility2, IRibbonExtensibility
 	{
