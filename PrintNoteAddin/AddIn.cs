@@ -8,7 +8,6 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Extensibility;
@@ -18,19 +17,16 @@ using Application = Microsoft.Office.Interop.OneNote.Application;  // Conflicts 
 using System.Reflection;
 using System.Drawing;
 using Microsoft.Office.Interop.OneNote;
-using System.Text;
 using System.Linq;
-using System.Threading;
-using System.Web;
-using System.Configuration;
-using System.Globalization;
+using static CreatePrintForm.CreatePrintForm;
+using System.Collections.Generic;
 
-#pragma warning disable CS3003 // Type is not CLS-compliant
+#pragma warning disable CS3001 // Type is not CLS-compliant
 
 namespace PrintNoteAddin
 {
 	[ComVisible(true)]
-	[Guid("6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17"), ProgId("PrintNote.Addin")]
+	[Guid("6ED07FCB-07F5-4AC4-AEFB-286DC51F9C17") /* {CLSID} */, ProgId("PrintNote.Addin")]
 
 	public class AddIn : IDTExtensibility2, IRibbonExtensibility
 	{
@@ -96,7 +92,11 @@ namespace PrintNoteAddin
 		public void SetOneNoteApplication(Application application)
 		{
 			OneNoteApplication = application;
-		}
+            string xmlHierarchy;
+            OneNoteApplication.GetHierarchy(null, HierarchyScope.hsPages, out xmlHierarchy);
+            var xdoc = XDocument.Parse(xmlHierarchy);
+            ns = xdoc.Root.Name.Namespace;
+        }
 
 		/// <summary>
 		/// Cleanup
@@ -118,7 +118,62 @@ namespace PrintNoteAddin
         //public async Task AddInButtonClicked(IRibbonControl control)
         public void AddInButtonClicked(IRibbonControl control)
         {
-            MessageBox.Show("This is a demo button!");
+            try
+            {
+                string path = "C:/Users/faisa/OneDrive/Desktop";
+
+                // Get and parse page content 
+                var pageId = OneNoteApplication.Windows.CurrentWindow.CurrentPageId;
+                string xmlPage;
+                OneNoteApplication.GetPageContent(pageId, out xmlPage);
+                var page = XDocument.Parse(xmlPage);
+
+                // Implementation of getting height & width by using attributes from <one:Position/> and <one:Size/>
+                const float pxToMm = (float)0.2645833333; // Scalar constant which converts pixels to millimeters 
+                float paperWidth = (float)215.9; // The width of the paper in millimeters
+                List<float> heights = new List<float>();
+                List<float> widths = new List<float>();
+                foreach (var node in page.Descendants(ns + "Position"))
+                {
+                    var sizeNode = node.Ancestors().First().Descendants(ns + "Size").First();
+                    (float x, float y) pos = (float.Parse(node.Attribute("x").Value), float.Parse(node.Attribute("y").Value));
+                    (float x, float y) size = (float.Parse(sizeNode.Attribute("width").Value), float.Parse(sizeNode.Attribute("height").Value));
+                    float nodeHeight = size.y + pos.y;
+                    float nodeWidth = size.x + pos.x;
+                    heights.Add(nodeHeight);
+                    widths.Add(nodeWidth);
+                }
+                float mmHeight = heights.Max() * pxToMm;
+                float mmWidth = widths.Max() * pxToMm;
+
+                // Sets a minimum height of 11in
+                if (mmHeight < 279.4 /* 11in - Letter height */)
+                {
+                    mmHeight = (float)279.4;
+                }
+                // OneNote scales content to paper width using a ratio, which can be used to obtain the new height
+                if (mmWidth > 215.9 /* 8.5in - Letter width */)
+                {
+                    float ratio = (float)215.9 / (mmWidth - (float)12.7 /* .5in for safety */);
+                    mmHeight = ratio * mmHeight;
+                }
+                // For content smaller than the paper width, a scalar constant is used to obtain the new height
+                else
+                {
+                    float ratio = (float)1.4;
+                    mmHeight = ratio * mmHeight;
+                }
+
+                // Needs administrative permisssions...
+                // It may be possible to use the OneNote Publish feature with a IMsoDocExporter interface
+                // The ideal solution would be a way to somehow parse the XML content
+                AddCustomPaperSize("Microsoft Print to PDF", "PrintNote", (float)215.9, mmHeight);
+                MessageBox.Show("Paper size set!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Exception:\n" + e.Message);
+            }
         }
 
         /// <summary>
@@ -129,16 +184,6 @@ namespace PrintNoteAddin
         public IStream GetImage(string imageName)
 		{
 			MemoryStream imageStream = new MemoryStream();
-            //switch (imageName)
-            //{
-            //    case "CSharp.png":
-            //        Properties.Resources.CSharp.Save(imageStream, ImageFormat.Png);
-            //        break;
-            //    default:
-            //        Properties.Resources.Logo.Save(imageStream, ImageFormat.Png);
-            //        break;
-            //}
-
             BindingFlags flags = BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 
             var b = typeof(Properties.Resources).GetProperty(imageName.Substring(0, imageName.IndexOf('.')), flags).GetValue(null, null) as Bitmap;
