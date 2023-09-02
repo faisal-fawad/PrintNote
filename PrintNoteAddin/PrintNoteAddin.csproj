@@ -109,6 +109,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\logo.ico" />
     <Content Include="Resources\Logo.png" />
     <Content Include="Resources\Print.png" />
     <None Include="ribbon.xml">

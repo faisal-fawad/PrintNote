@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0E21553D28AA488BA465179A2836A239"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_692D7E391D074D36AD2530720FB8D6C4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -158,6 +164,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0E21553D28AA488BA465179A2836A239"
+            {
+            "SourcePath" = "8:..\\PrintNoteAddin\\Resources\\Logo.ico"
+            "TargetName" = "8:Logo.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_76DE0C3E4C3C41398EBF2960C9F81C36"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED99A6775AE44FF4B343B291117934EE"
             {
             "SourcePath" = "8:..\\PrintNoteAddin\\ribbon.xml"
@@ -312,7 +338,7 @@
         "Name" = "8:PrintNoteAddin"
         "ProductName" = "8:PrintNote"
         "ProductCode" = "8:{DB8D2CD0-6584-4BA0-AF36-6CBDCF8D98D7}"
-        "PackageCode" = "8:{4EF6F551-9EB7-4208-9904-3AFBA4A8CD5E}"
+        "PackageCode" = "8:{90B1633E-BA1F-44CD-9D7A-26F1FE7E943B}"
         "UpgradeCode" = "8:{CE910BBE-9F8B-49F6-A661-1E4C7E35AB93}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -329,7 +355,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_0E21553D28AA488BA465179A2836A239"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
