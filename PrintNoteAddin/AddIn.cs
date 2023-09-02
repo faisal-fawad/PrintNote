@@ -20,6 +20,7 @@ using Microsoft.Office.Interop.OneNote;
 using System.Linq;
 using static CreatePrintForm.CreatePrintForm;
 using System.Collections.Generic;
+using System.CodeDom;
 
 #pragma warning disable CS3001 // Type is not CLS-compliant
 
@@ -57,9 +58,9 @@ namespace PrintNoteAddin
                 string file = File.ReadAllText(workingDirectory);
                 return file;
             }
-            catch (Exception e)
+            catch
             {
-                MessageBox.Show("Exception from Addin.LoadRibbon:" + e.Message);
+                MessageBox.Show("Unable to load ribbon", "Error");
                 return "";
             }
         }
@@ -120,17 +121,13 @@ namespace PrintNoteAddin
         {
             try
             {
-                string path = "C:/Users/faisa/OneDrive/Desktop";
-
-                // Get and parse page content 
                 var pageId = OneNoteApplication.Windows.CurrentWindow.CurrentPageId;
                 string xmlPage;
-                OneNoteApplication.GetPageContent(pageId, out xmlPage);
+                OneNoteApplication.GetPageContent(pageId, out xmlPage, PageInfo.piBasic, XMLSchema.xs2013);
                 var page = XDocument.Parse(xmlPage);
 
                 // Implementation of getting height & width by using attributes from <one:Position/> and <one:Size/>
                 const float pxToMm = (float)0.2645833333; // Scalar constant which converts pixels to millimeters 
-                float paperWidth = (float)215.9; // The width of the paper in millimeters
                 List<float> heights = new List<float>();
                 List<float> widths = new List<float>();
                 foreach (var node in page.Descendants(ns + "Position"))
@@ -143,36 +140,57 @@ namespace PrintNoteAddin
                     heights.Add(nodeHeight);
                     widths.Add(nodeWidth);
                 }
-                float mmHeight = heights.Max() * pxToMm;
-                float mmWidth = widths.Max() * pxToMm;
 
-                // Sets a minimum height of 11in
+                // Gets the max height and width based off of the contents of the page
+                float mmHeight;
+                float mmWidth;
+                if (heights.Count > 0 & widths.Count > 0) 
+                {
+                    mmHeight = heights.Max() * pxToMm;
+                    mmWidth = widths.Max() * pxToMm;
+                }
+                else
+                {
+                    mmHeight = (float)279.4 /* 11in */;
+                    mmWidth = (float)215.9 /* 8.5in */;
+                }
+
+                // Make sures the height meets the minimum requirement
                 if (mmHeight < 279.4 /* 11in - Letter height */)
                 {
                     mmHeight = (float)279.4;
                 }
-                // OneNote scales content to paper width using a ratio, which can be used to obtain the new height
+
+                // OneNote scales content to paper width using a ratio, which can be used to obtain the new height before printing
                 if (mmWidth > 215.9 /* 8.5in - Letter width */)
                 {
                     float ratio = (float)215.9 / (mmWidth - (float)12.7 /* .5in for safety */);
                     mmHeight = ratio * mmHeight;
                 }
-                // For content smaller than the paper width, a scalar constant is used to obtain the new height
-                else
+                else // For content smaller than the paper width, a scalar constant is used to obtain the new height before printing
                 {
                     float ratio = (float)1.4;
                     mmHeight = ratio * mmHeight;
                 }
 
-                // Needs administrative permisssions...
-                // It may be possible to use the OneNote Publish feature with a IMsoDocExporter interface
-                // The ideal solution would be a way to somehow parse the XML content
+                // Adds a custom paper size named PrintNote - needs administrative permissions
+                // It may be possible to use the OneNote Publish feature with a IMsoDocExporter interface to avoid the use of administrative permissions
                 AddCustomPaperSize("Microsoft Print to PDF", "PrintNote", (float)215.9, mmHeight);
-                MessageBox.Show("Paper size set!");
             }
             catch (Exception e)
             {
-                MessageBox.Show("Exception:\n" + e.Message);
+                if (e.Message.Contains("0x80042005")) // hrPageDoesNotExist error code
+                {
+                    MessageBox.Show("No page in view!", "Error");
+                }
+                else if (e.Message.Contains("System error number: 5")) // Error from CreatePrintForm.cs
+                {
+                    MessageBox.Show("Missing administrative permissions!");
+                }
+                else
+                {
+                    MessageBox.Show("Unknown exception:\n" + e.Message, "Error");
+                }
             }
         }
 

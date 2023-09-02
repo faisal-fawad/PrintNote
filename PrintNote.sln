@@ -9,6 +9,8 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupX86", "SetupX86\SetupX86.vdproj", "{610B97A7-752E-4501-8415-A40251735F85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSize", "CustomSize\CustomSize.csproj", "{8D6C72E6-E27E-41E5-892E-949364613BB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,8 +75,29 @@ Global
 		{610B97A7-752E-4501-8415-A40251735F85}.Release|x64.Build.0 = Release
 		{610B97A7-752E-4501-8415-A40251735F85}.Release|x86.ActiveCfg = Release
 		{610B97A7-752E-4501-8415-A40251735F85}.Release|x86.Build.0 = Release
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Debug|x64.Build.0 = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Debug|x86.Build.0 = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.LocalDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.LocalDebug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.LocalDebug|x64.ActiveCfg = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.LocalDebug|x64.Build.0 = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.LocalDebug|x86.ActiveCfg = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.LocalDebug|x86.Build.0 = Debug|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Release|x64.ActiveCfg = Release|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Release|x64.Build.0 = Release|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Release|x86.ActiveCfg = Release|Any CPU
+		{8D6C72E6-E27E-41E5-892E-949364613BB6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CA81896-EE9C-4118-BA8D-B3721F38ED3C}
 	EndGlobalSection
 EndGlobal

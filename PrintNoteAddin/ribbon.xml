@@ -4,7 +4,7 @@
         <tabs>
             <tab id="tabPrintNote" label="PrintNote" keytip="H">
 				<group id="groupPrint" label="Print">
-					<button id="buttonPrint" label="Print" size="large" screentip="Print page" onAction="AddInButtonClicked" tag="print" keytip="P" image="Print.png" visible="true"/>
+					<button id="buttonPrint" label="Set paper size" size="large" screentip="Sets the paper size for printing" onAction="AddInButtonClicked" tag="paper-size" keytip="P" image="Print.png" visible="true"/>
 				</group>
             </tab>
         </tabs>
