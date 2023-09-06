@@ -12,10 +12,17 @@
 
 ### Usage:
 - Before printing a page, press the *Set paper size* button under the *PrintNote* tab
-![Image of above](images/read1.png)
+- ![Image of above](images/read1.png)
 - When printing the page, use the paper size named *PrintNote* for a clean one page document
-![Image of above](images/read2.png)
+- ![Image of above](images/read2.png)
 
 ### Future Plans:
+- Create a more accurate algorithm for determining paper size
 - Find an alternative solution without the requirement of administrative permissions
 - Add support for exporting groups of pages, sections and notebooks
+
+### Comparison:
+- Before PrintNote:
+- ![Image of before](images/read3.PNG)
+- After PrintNote:
+- ![Image of after](images/read4.PNG)
