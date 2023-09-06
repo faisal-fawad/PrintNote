@@ -166,7 +166,7 @@ namespace PrintNoteAddin
                 // OneNote scales content to paper width using a ratio, which can be used to obtain the new height before printing
                 float ratio = (paperWidth + (float)12.7 /* .5in for safety */) / mmWidth;
                 if (ratio > 1.4) { ratio = (float)1.4; /* Upper limit for ratio */ }
-                else if (ratio < 0.8) { ratio += (ratio / 8); /* Small ratios need a readjustment to fit the page */ }
+                else if (ratio < 1) { ratio += (ratio / 8); /* Small ratios need a readjustment to fit the page */ }
                 mmHeight *= ratio;
 
                 // Adds a custom paper size named PrintNote - needs administrative permissions
