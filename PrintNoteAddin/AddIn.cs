@@ -142,6 +142,8 @@ namespace PrintNoteAddin
                 }
 
                 // Gets the max height and width based off of the contents of the page
+                float paperWidth = (float)215.9 /* 8.5in */;
+                float paperHeight = (float)279.4 /* 11in */;
                 float mmHeight;
                 float mmWidth;
                 if (heights.Count > 0 & widths.Count > 0) 
@@ -151,31 +153,25 @@ namespace PrintNoteAddin
                 }
                 else
                 {
-                    mmHeight = (float)279.4 /* 11in */;
-                    mmWidth = (float)215.9 /* 8.5in */;
+                    mmHeight = paperHeight;
+                    mmWidth = paperWidth;
                 }
 
                 // Make sures the height meets the minimum requirement
-                if (mmHeight < 279.4 /* 11in - Letter height */)
+                if (mmHeight < paperHeight /* 11in - Letter height */)
                 {
-                    mmHeight = (float)279.4;
+                    mmHeight = paperHeight;
                 }
 
                 // OneNote scales content to paper width using a ratio, which can be used to obtain the new height before printing
-                if (mmWidth > 215.9 /* 8.5in - Letter width */)
-                {
-                    float ratio = (float)215.9 / (mmWidth - (float)12.7 /* .5in for safety */);
-                    mmHeight = ratio * mmHeight;
-                }
-                else // For content smaller than the paper width, a scalar constant is used to obtain the new height before printing
-                {
-                    float ratio = (float)1.4;
-                    mmHeight = ratio * mmHeight;
-                }
+                float ratio = (paperWidth + (float)12.7 /* .5in for safety */) / mmWidth;
+                if (ratio > 1.4) { ratio = (float)1.4; /* Upper limit for ratio */ }
+                else if (ratio < 0.8) { ratio += (ratio / 8); /* Small ratios need a readjustment to fit the page */ }
+                mmHeight *= ratio;
 
                 // Adds a custom paper size named PrintNote - needs administrative permissions
                 // It may be possible to use the OneNote Publish feature with a IMsoDocExporter interface to avoid the use of administrative permissions
-                AddCustomPaperSize("Microsoft Print to PDF", "PrintNote", (float)215.9, mmHeight);
+                AddCustomPaperSize("Microsoft Print to PDF", "PrintNote", paperWidth, mmHeight);
             }
             catch (Exception e)
             {
