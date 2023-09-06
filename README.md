@@ -12,9 +12,9 @@
 
 ### Usage:
 - Before printing a page, press the *Set paper size* button under the *PrintNote* tab
-![Image of above](Images/read1.png)
+- ![Image of above](Images/read1.png)
 - When printing the page, use the paper size named *PrintNote* for a clean one page document
-![Image of above](Images/read2.png)
+- ![Image of above](Images/read2.png)
 
 ### Future Plans:
 - Find an alternative solution without the requirement of administrative permissions
