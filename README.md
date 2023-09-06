@@ -17,5 +17,6 @@
 - ![Image of above](Images/read2.png)
 
 ### Future Plans:
+- Create a more accurate algorithm for determining paper size
 - Find an alternative solution without the requirement of administrative permissions
 - Add support for exporting groups of pages, sections and notebooks
