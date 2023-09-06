@@ -23,6 +23,6 @@
 
 ### Comparison:
 - Before PrintNote:
-- ![Image of before](Images/read3.PNG)
+- ![Image of before](Images/read3.png)
 - After PrintNote:
-- ![Image of after](Images/read4.PNG)
+- ![Image of after](Images/read4.png)
